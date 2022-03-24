@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpActivity"
+    android:background="#FFFFFF">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txtSignUp1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/signup"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgDefaultDpPerson"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/default_dp_person"
+            android:layout_below="@+id/txtSignUp1"
+            android:layout_marginTop="15dp"/>
+
+        <EditText
+            android:id="@+id/etFullName"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginHorizontal="10dp"
+            android:paddingHorizontal="10dp"
+            android:hint="@string/fullname"
+            android:background="@drawable/style_rounded_corner"
+            android:backgroundTint="#dcdcdc"
+            android:layout_below="@+id/imgDefaultDpPerson"
+            android:layout_marginTop="25dp"
+            android:inputType="text"/>
+
+        <EditText
+            android:id="@+id/etUserName"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginHorizontal="10dp"
+            android:paddingHorizontal="10dp"
+            android:hint="@string/username"
+            android:background="@drawable/style_rounded_corner"
+            android:backgroundTint="#dcdcdc"
+            android:layout_below="@+id/etFullName"
+            android:layout_marginTop="15dp"
+            android:inputType="text"/>
+
+        <EditText
+            android:id="@+id/etEmailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginHorizontal="10dp"
+            android:paddingHorizontal="10dp"
+            android:hint="@string/email_address"
+            android:background="@drawable/style_rounded_corner"
+            android:backgroundTint="#dcdcdc"
+            android:layout_below="@+id/etUserName"
+            android:layout_marginTop="15dp"
+            android:inputType="textEmailAddress"/>
+
+        <EditText
+            android:id="@+id/etPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginHorizontal="10dp"
+            android:paddingHorizontal="10dp"
+            android:hint="@string/phone_number"
+            android:background="@drawable/style_rounded_corner"
+            android:backgroundTint="#dcdcdc"
+            android:layout_below="@+id/etEmailAddress"
+            android:layout_marginTop="15dp"
+            android:inputType="number"
+            tools:ignore="TextFields" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            app:passwordToggleEnabled="true"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etPhoneNumber"
+            android:layout_marginTop="5dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:hint="@string/enter_password"
+                android:backgroundTint="#dcdcdc"
+                android:paddingHorizontal="10dp"
+                android:layout_marginHorizontal="10dp"
+                android:background="@drawable/style_rounded_corner"
+                android:inputType="textPassword"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etConfirmPassword"
+            android:layout_width="match_parent"
+            app:passwordToggleEnabled="true"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etPassword"
+            android:layout_marginTop="5dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:hint="@string/confirm_password"
+                android:backgroundTint="#dcdcdc"
+                android:paddingHorizontal="10dp"
+                android:layout_marginHorizontal="10dp"
+                android:background="@drawable/style_rounded_corner"
+                android:inputType="textPassword"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <EditText
+            android:id="@+id/etBio"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_marginHorizontal="10dp"
+            android:paddingHorizontal="10dp"
+            android:hint="@string/bio"
+            android:background="@drawable/style_rounded_corner"
+            android:backgroundTint="#dcdcdc"
+            android:layout_below="@+id/etConfirmPassword"
+            android:layout_marginTop="15dp"
+            android:inputType="text"/>
+
+        <TextView
+            android:id="@+id/txtSocialMediaLink"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/social_media_link"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_below="@+id/etBio"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="20dp"/>
+
+        <RelativeLayout
+            android:id="@+id/etTwitterLink"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtSocialMediaLink">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:src="@drawable/twitter_logo"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:hint="@string/twitter_link"
+                android:paddingHorizontal="10dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="#dcdcdc"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/style_rounded_corner_1"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/etFacebookLink"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etTwitterLink">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:src="@drawable/fb_logo_1"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:hint="@string/facebook_link"
+                android:paddingHorizontal="10dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="#dcdcdc"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/style_rounded_corner_1"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/etInstagramLink"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etFacebookLink">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:src="@drawable/insta_logo"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:hint="@string/instagram_link"
+                android:paddingHorizontal="10dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="#dcdcdc"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/style_rounded_corner_1"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/etYoutubeLink"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etInstagramLink">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:src="@drawable/youtube_logo"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:hint="@string/youtube_link"
+                android:paddingHorizontal="10dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="#dcdcdc"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/style_rounded_corner_1"/>
+
+        </RelativeLayout>
+
+        <CheckBox
+            android:id="@+id/cbAgreement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etYoutubeLink"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/agreement_string"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"/>
+
+        <Button
+            android:id="@+id/btnSignUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_up_1"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_below="@+id/cbAgreement"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/style_rounded_corner">
+        </Button>
+
+        <RelativeLayout
+            android:id="@+id/txtAlreadyHaveAccountAndLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnSignUp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="18dp">
+
+            <TextView
+                android:id="@+id/txtAlreadyHaveAnAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/already_have_an_account"
+                android:layout_marginTop="17dp" />
+
+            <TextView
+                android:id="@+id/txtLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login1"
+                android:layout_marginTop="15dp"
+                android:textSize="16sp"
+                android:layout_toEndOf="@+id/txtAlreadyHaveAnAccount"
+                android:layout_marginStart="5dp"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</ScrollView>
